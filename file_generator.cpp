@@ -54,7 +54,11 @@ void sort_on_file(int *array, const int &dim, const char *name, const std::strin
 		file<<array[i];
 		if(i != dim-1) file<<delimiter; // i don't want to add the delimiter to the last element
 	}
-		
+	
+	// delete
+	delete []name2;
+	delete []extension;
+
 	file.close();
 }
 
@@ -128,7 +132,12 @@ int main (void) {
 		}
 		
 	} while (true);
-			
+	
+	// delete
+	delete []file_name;
+	delete []delimiter;
+	delete []container;
+
 	f1.close();
 
 	system("pause");
